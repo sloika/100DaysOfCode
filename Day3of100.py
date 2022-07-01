@@ -1,13 +1,13 @@
-#odd or even calculator
+# odd or even calculator
 
 def bmi_calculator():
     w = float(input("Please enter your weight in kg, e.g. 85: "))
     h = float(input("Please enter your height in m, e.g 1.75: "))
-    bmi = round(w/h**2)
+    bmi = round(w / h ** 2)
 
     if bmi < 18.5:
         print(f"Your BMI is {bmi}, you are underweight.")
-    elif 18.5 <= bmi <25:
+    elif 18.5 <= bmi < 25:
         print(f"Your BMI is {bmi}, you have a normal weight.")
     elif 25 <= bmi < 30:
         print(f"Your BMI is {bmi}, you are slightly overweight.")
@@ -17,18 +17,18 @@ def bmi_calculator():
         print(f"Your BMI is {bmi}, you are clinically obese.")
     return 0
 
+
 def leapyear_calculator():
     year = int(input("Please enter the year YYYY: "))
-    leap = False
     if not year % 4:
         if not year % 100 and not year % 400:
-            leap = True
             print("A leap year.")
         else:
             print("Not a leap year.")
     else:
         print("Not a leap year.")
     return 0
+
 
 def pizza_calculator():
     size = input("size? (S,M,L) : ").upper()
@@ -59,13 +59,16 @@ def pizza_calculator():
 
     return 0
 
-def count_true(name, n_true=None):
+
+def count_true(name):
     n_true = name.count("t") + name.count("r") + name.count("u") + name.count("e")
     return n_true
 
-def count_love(name, n_love=None):
+
+def count_love(name):
     n_love = name.count("l") + name.count("o") + name.count("v") + name.count("e")
     return n_love
+
 
 def love_calculator():
     name1 = input("Your name : ").lower()
@@ -78,7 +81,7 @@ def love_calculator():
 
     if score <= 10 or score >= 90:
         print(f"Your score is {score}, you go together like coke and mentos.")
-    elif 40 <= score <=50:
+    elif 40 <= score <= 50:
         print(f"Your score is {score}, you are alright together.")
     else:
         print(f"Your score is {score}, cool.")
@@ -87,6 +90,6 @@ def love_calculator():
 
 
 love_calculator()
-#pizza_calculator()
-#leapyear_calculator()
-#bmi_calculator()
+# pizza_calculator()
+# leapyear_calculator()
+# bmi_calculator()

@@ -1,5 +1,6 @@
 from random_word import RandomWords
 
+
 def hangman_game():
     print(logo)
     r = RandomWords()
@@ -28,18 +29,18 @@ def hangman_game():
                 blanks_list[index] = guess
                 blanks = "".join(blanks_list)
 
-        if found == False:
+        if not found:
             counter += 1
             print(counter)
 
         print(f"Word : {blanks}")
 
-        if counter >= len(stages)-1:
+        if counter >= len(stages) - 1:
             end_of_game = True
             print(stages[counter])
             print("You are dead")
             print(f"The right word is : '{chosen_word}'")
-        elif "_"  not in blanks:
+        elif "_" not in blanks:
             end_of_game = True
             print(stages[counter])
             print("Congrats, you are avoiding being hanged!")

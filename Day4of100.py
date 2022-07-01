@@ -1,5 +1,6 @@
 import random
 
+
 def who_pays():
     names_string = input("Give me all the names on the table, separated by comma : \n")
     names = names_string.split(", ")
@@ -94,6 +95,8 @@ def rock_paper_scissor():
             print("Draw... :|")
 
     return 0
+
+
 '''
 #reminder on list access
 fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
@@ -103,5 +106,5 @@ dirty_dozen = [fruits, vegetables]
 
 print(dirty_dozen[0][1]) #kale
 '''
-#rock_paper_scissor()
-#who_pays()
+# rock_paper_scissor()
+# who_pays()

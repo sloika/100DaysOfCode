@@ -3,22 +3,24 @@ import time
 import random
 import string
 
+
 def height_avg():
-    #get the input
+    # get the input
     heights = input("Please insert the list of heights separated by a single space").split()
-    #change it to int
+    # change it to int
     int_heights = [int(x) for x in heights]
-    #get to np array
+    # get to np array
     arr_heights = np.array(int_heights)
-    avg = np.sum(arr_heights)/len(arr_heights)
+    avg = np.sum(arr_heights) / len(arr_heights)
     print(f"Avg height of the students is : {avg}")
     print(f"Tallest height is : {np.amax(arr_heights)}")
 
     return 0
 
+
 def fizzbuzz():
-    limit = int(input("Please specify the end number for fizbuzz calculation : "))
-    arr = np.arange(1,limit+1)
+    limit = int(input("Please specify the end number for fizzbuzz calculation : "))
+    arr = np.arange(1, limit + 1)
 
     start = time.perf_counter()
 
@@ -33,12 +35,13 @@ def fizzbuzz():
             print(n)
 
     end = time.perf_counter()
-    print(f"Execution time : {end-start}")
+    print(f"Execution time : {end - start}")
 
     return 0
 
+
 def pass_gen():
-    #length = input("How many digits of passwords? ")
+    # length = input("How many digits of passwords? ")
     n_letters = int(input("How many letters? "))
     n_symbols = int(input("How many symbols? "))
     n_numbers = int(input("How many numbers? "))
@@ -47,7 +50,7 @@ def pass_gen():
     symbols = ''.join(random.SystemRandom().choice(string.punctuation) for _ in range(n_symbols))
     numbers = ''.join(random.SystemRandom().choice(string.digits) for _ in range(n_numbers))
 
-    chars = letters+symbols+numbers
+    chars = letters + symbols + numbers
 
     pwd = ''.join(random.sample(chars, len(chars)))
 
@@ -58,10 +61,8 @@ def pass_gen():
 
 pass_gen()
 
+# fizzbuzz()
+# height_avg()
 
-
-#fizzbuzz()
-#height_avg()
-
-#0.00021635100711137056
-#0.00024015000963117927
+# 0.00021635100711137056
+# 0.00024015000963117927
