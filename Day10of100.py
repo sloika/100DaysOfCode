@@ -3,7 +3,7 @@ from os import system
 
 class DaysinMonth(object):
     def __init__(self):
-        print("Welcome to the day-in-the-month calculator")
+        print("Welcome to the day-in-the-month calculator.")
 
     @staticmethod
     def number_of_days(year: int, month: int):
